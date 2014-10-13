@@ -1,0 +1,164 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1900" measuredH="1038" mockupW="1878" mockupH="987">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPad" x="22" y="122" w="-1" h="-1" measuredW="616" measuredH="916" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Canvas" x="209" y="269" w="382" h="659" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Canvas" x="64" y="269" w="133" h="659" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="287" y="229" w="86" h="-1" measuredW="76" measuredH="40" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>SoLe</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="79" y="283" w="-1" h="-1" measuredW="82" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <text>Startseite</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="79" y="310" w="84" h="27" measuredW="64" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Lernen</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="222" y="51" w="-1" h="-1" measuredW="218" measuredH="48" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Startscreen</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Paragraph" x="263" y="337" w="-1" h="-1" measuredW="275" measuredH="80" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Du%20hast%20folgeden%20Lernfortschritt%3A%0A%09Programmieren%3A%2020/2000%20Fragen%0A%09SoftwareEngeering%3A%20200/201%20Fragen</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Button" x="79" y="337" w="82" h="27" measuredW="71" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Statistik</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::iPad" x="653" y="122" w="-1" h="-1" measuredW="616" measuredH="916" zOrder="9" locked="false" isInGroup="-1"/>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Canvas" x="840" y="269" w="382" h="659" measuredW="100" measuredH="70" zOrder="10" locked="false" isInGroup="-1"/>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Canvas" x="695" y="269" w="133" h="659" measuredW="100" measuredH="70" zOrder="11" locked="false" isInGroup="-1"/>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="918" y="229" w="86" h="-1" measuredW="76" measuredH="40" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>SoLe</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="710" y="283" w="-1" h="-1" measuredW="82" measuredH="27" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16777215</color>
+        <text>Startseite</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="710" y="310" w="84" h="27" measuredW="64" measuredH="27" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <text>Lernen</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="853" y="51" w="-1" h="-1" measuredW="163" measuredH="48" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Learning</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Button" x="710" y="337" w="82" h="27" measuredW="71" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Statistik</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::ComboBox" x="977" y="311" w="-1" h="-1" measuredW="119" measuredH="24" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Programmieren</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::CheckBox" x="863" y="281" w="-1" h="-1" measuredW="114" measuredH="22" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pr%FCfungsmodus</text>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::Label" x="869" y="309" w="-1" h="-1" measuredW="96" measuredH="21" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fach%20ausw%E4hlen%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::List" x="869" y="364" w="-1" h="-1" measuredW="100" measuredH="126" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Frage%201%0AFrage%202%0AFrage%203%0AFrage%204%0A...</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Label" x="869" y="332" w="-1" h="-1" measuredW="109" measuredH="21" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fragen%20ausw%E4hlen%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Button" x="977" y="512" w="-1" h="-1" measuredW="53" measuredH="27" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Start</text>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::iPad" x="1284" y="122" w="-1" h="-1" measuredW="616" measuredH="916" zOrder="23" locked="false" isInGroup="-1"/>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Canvas" x="1471" y="269" w="382" h="659" measuredW="100" measuredH="70" zOrder="24" locked="false" isInGroup="-1"/>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Canvas" x="1326" y="269" w="133" h="659" measuredW="100" measuredH="70" zOrder="25" locked="false" isInGroup="-1"/>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Label" x="1549" y="229" w="86" h="-1" measuredW="76" measuredH="40" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>SoLe</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Button" x="1341" y="283" w="-1" h="-1" measuredW="82" measuredH="27" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16777215</color>
+        <text>Startseite</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Button" x="1341" y="310" w="84" h="27" measuredW="64" measuredH="27" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <text>Lernen</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::Label" x="1484" y="51" w="-1" h="-1" measuredW="165" measuredH="48" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Question</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Button" x="1341" y="337" w="82" h="27" measuredW="71" measuredH="27" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Statistik</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::TextArea" x="1494" y="316" w="344" h="196" measuredW="200" measuredH="140" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20Frage%20%3F%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Label" x="1494" y="286" w="-1" h="-1" measuredW="36" measuredH="21" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Frage%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="1494" y="554" w="-1" h="-1" measuredW="73" measuredH="127" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28o%29%20Answer1%0A%28o%29%20Answer2%0A%28o%29%20Answer3%0A%28o%29%20Answer4%0A%28o%29%20Answer5%0A%28o%29%20Answer6</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Label" x="1495" y="519" w="-1" h="-1" measuredW="119" measuredH="21" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>W%E4hle%20eine%20Antwort%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Button" x="1549" y="716" w="50" h="27" measuredW="50" measuredH="27" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Next</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Button" x="1494" y="716" w="-1" h="-1" measuredW="51" measuredH="27" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Back</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
