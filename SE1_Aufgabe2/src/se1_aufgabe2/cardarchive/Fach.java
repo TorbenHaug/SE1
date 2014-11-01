@@ -38,11 +38,11 @@ public class Fach {
         return new ArrayList<>();
     }
     
-    public void createLernkarte(String frage, Antwort antwort, Professor professor, ArrayList<File> anhaengeFile){
+    public <T extends Antwort> void createLernkarte(String frage, T antwort, Professor professor, ArrayList<File> anhaengeFile){
         ArrayList<Anhang> anhaenge = new ArrayList<>();
         for (File f: anhaengeFile){
             anhaenge.add(new Anhang(f));
         }
-        getLernkarten().add(new Lernkarte(frage, professor, antwort, anhaenge, this));
+        getLernkarten().add(new Lernkarte<>(frage, professor, antwort, anhaenge, this));
     }
 }

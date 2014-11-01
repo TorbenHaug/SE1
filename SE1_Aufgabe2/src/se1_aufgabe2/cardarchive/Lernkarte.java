@@ -13,15 +13,15 @@ import se1_aufgabe2.accounting.Professor;
  *
  * @author ClausTorben
  */
-public class Lernkarte {
+public class Lernkarte<T extends Antwort> {
     private final UUID id;
     private final String frage;
     private final Professor ersteller;
-    private final Antwort antwort;
+    private final T antwort;
     private final ArrayList<Anhang> anhaenge;
     private final Fach fach;
 
-    public Lernkarte(String frage, Professor ersteller, Antwort antwort, ArrayList<Anhang> anhaenge, Fach fach) {
+    public Lernkarte(String frage, Professor ersteller, T antwort, ArrayList<Anhang> anhaenge, Fach fach) {
         this.id = UUID.randomUUID();
         this.frage = frage;
         this.ersteller = ersteller;
@@ -38,7 +38,7 @@ public class Lernkarte {
         return ersteller;
     }
 
-    public Antwort getAntwort() {
+    public T getAntwort() {
         return antwort;
     }
 
