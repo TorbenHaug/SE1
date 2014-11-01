@@ -31,6 +31,4 @@ public class Professor {
     public String getHawKennung() {
         return hawKennung;
     }
-    
-    
 }

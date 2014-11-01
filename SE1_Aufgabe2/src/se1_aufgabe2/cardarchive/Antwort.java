@@ -16,5 +16,5 @@ public class Antwort {
         Freitext,
         Bild,
         Audio
-    } 
+    }
 }

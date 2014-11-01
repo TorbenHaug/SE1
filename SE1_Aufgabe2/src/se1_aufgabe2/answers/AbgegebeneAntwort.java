@@ -19,5 +19,4 @@ public class AbgegebeneAntwort {
     public Object getWert() {
         return wert;
     }
-    
 }
