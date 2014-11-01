@@ -21,5 +21,13 @@ public class MultiChoice extends Antwort{
     public ArrayList<AntwortMoeglichkeit> getAntwortMoeglichkeiten() {
         return antwortMoeglichkeiten;
     }
-    
-}
+	
+	public void addAntwortMoeglichkeit(String inAntwort, boolean inIstRichtig)
+	{
+		this.antwortMoeglichkeiten.add(new AntwortMoeglichkeit(inAntwort, inIstRichtig));
+	}
+
+	public void removeAntwortMoeglichkeit(AntwortMoeglichkeit inMoeglichkeit)
+	{
+		this.antwortMoeglichkeiten.remove(inMoeglichkeit);
+	}}

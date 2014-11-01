@@ -25,5 +25,33 @@ public class AntwortMoeglichkeit {
     public boolean isRichtig() {
         return richtig;
     }
-    
+
+	@Override
+	public boolean equals(final Object o)
+	{
+		if(this == o)
+		{
+			return true;
+		}
+		if(o == null || getClass() != o.getClass())
+		{
+			return false;
+		}
+
+		AntwortMoeglichkeit that = (AntwortMoeglichkeit)o;
+
+		if(richtig != that.richtig)
+		{
+			return false;
+		}
+		return antwort.equals(that.antwort);
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = antwort.hashCode();
+		result = 31 * result + (richtig ? 1 : 0);
+		return result;
+	}
 }
