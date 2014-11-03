@@ -17,10 +17,13 @@ public class Student {
     private final String name;
     private final String akennung;
     private final int matrikelNr;
-    private final short semester;
+    private final int semester;
 	private final List<AbgegebeneAntwort> abgegebeneLernkarten = new ArrayList<>();
 
-    public Student(String name, String akennung, int matrikelNr, short semester) {
+    public Student(String name, String akennung, int matrikelNr, int semester) {
+	    if(!isValidKennung(akennung))
+		    throw new InvalidKennungException(akennung + " is not a valid kennung.");
+
         this.name = name;
         this.akennung = akennung;
         this.matrikelNr = matrikelNr;
@@ -39,12 +42,17 @@ public class Student {
         return matrikelNr;
     }
 
-    public short getSemester() {
+    public int getSemester() {
         return semester;
     }
 
 	public List<AbgegebeneAntwort> getAbgegebeneLernkarten()
 	{
 		return abgegebeneLernkarten;
+	}
+
+	public static boolean isValidKennung(String inKennung)
+	{
+		return inKennung.startsWith("a") && inKennung.matches("[a-z]{3}[0-9]{3}");
 	}
 }
