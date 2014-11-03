@@ -7,6 +7,7 @@ package se1_aufgabe2.cardarchive;
 
 import java.util.Collection;
 import java.util.UUID;
+import se1_aufgabe2.cardarchive.antwort.Antwort;
 
 /**
  *

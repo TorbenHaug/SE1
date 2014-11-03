@@ -8,6 +8,7 @@ package se1_aufgabe2.cardarchive;
 import java.util.ArrayList;
 import java.util.UUID;
 import se1_aufgabe2.accounting.Professor;
+import se1_aufgabe2.cardarchive.antwort.Antwort;
 
 /**
  *

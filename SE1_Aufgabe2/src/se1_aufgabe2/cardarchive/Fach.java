@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import se1_aufgabe2.accounting.Professor;
+import se1_aufgabe2.cardarchive.antwort.Antwort;
 
 /**
  *
