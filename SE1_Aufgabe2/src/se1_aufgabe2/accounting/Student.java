@@ -51,6 +51,23 @@ public class Student {
 		return abgegebeneLernkarten;
 	}
 
+	public float getRichtigRate()
+	{
+		int richtig = 0;
+		int alle = 0;
+		for(AbgegebeneAntwort antwort : this.getAbgegebeneLernkarten())
+		{
+			if(antwort.getGeprueftVon() != null)
+			{
+				alle++;
+				if(antwort.isWarRichtig())
+					richtig++;
+			}
+		}
+
+		return richtig / alle;
+	}
+
 	public static boolean isValidKennung(String inKennung)
 	{
 		return inKennung.startsWith("a") && inKennung.matches("[a-z]{3}[0-9]{3}");

@@ -16,10 +16,12 @@ public class AbgegebeneAntwort {
     private final Object wert;
 	private final Lernkarte lernkarte;
 	private Mitarbeiter geprueftVon;
+	private boolean warRichtig;
 
     public AbgegebeneAntwort(Object wert, Lernkarte inLernkarte) {
         this.wert = wert;
 	    this.lernkarte = inLernkarte;
+	    this.warRichtig = false;
     }
 
     public Object getWert() {
@@ -39,5 +41,15 @@ public class AbgegebeneAntwort {
 	public void setGeprueftVon(Mitarbeiter inGeprueftVon)
 	{
 		geprueftVon = inGeprueftVon;
+	}
+
+	public boolean isWarRichtig()
+	{
+		return warRichtig;
+	}
+
+	public void setWarRichtig(final boolean inWarRichtig)
+	{
+		warRichtig = inWarRichtig;
 	}
 }
