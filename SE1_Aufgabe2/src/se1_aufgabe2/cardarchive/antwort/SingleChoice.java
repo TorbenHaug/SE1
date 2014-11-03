@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package se1_aufgabe2.cardarchive;
+package se1_aufgabe2.cardarchive.antwort;
 
 import java.util.*;
 
@@ -11,17 +11,17 @@ import java.util.*;
  *
  * @author ClausTorben
  */
-public class MultiChoice extends Antwort {
+public class SingleChoice extends Antwort{
     private final ArrayList<AntwortMoeglichkeit> antwortMoeglichkeiten;
 
-    public MultiChoice(ArrayList<AntwortMoeglichkeit> antwortMoeglichkeiten) {
+    public SingleChoice(ArrayList<AntwortMoeglichkeit> antwortMoeglichkeiten) {
         this.antwortMoeglichkeiten = antwortMoeglichkeiten;
     }
 
     public ArrayList<AntwortMoeglichkeit> getAntwortMoeglichkeiten() {
         return antwortMoeglichkeiten;
     }
-	
+
 	public void addAntwortMoeglichkeit(String inAntwort, boolean inIstRichtig)
 	{
 		this.antwortMoeglichkeiten.add(new AntwortMoeglichkeit(inAntwort, inIstRichtig));

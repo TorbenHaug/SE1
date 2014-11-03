@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package se1_aufgabe2.cardarchive;
+package se1_aufgabe2.cardarchive.antwort;
 
 import java.io.File;
 
@@ -11,14 +11,15 @@ import java.io.File;
  *
  * @author ClausTorben
  */
-public class Audio extends Antwort {
-    private final File audio;
+public class Bild extends Antwort {
+    private final File bild;
 
-    public Audio(File audio) {
-        this.audio = audio;
+    public Bild(File bild) {
+        this.bild = bild;
     }
 
-    public File getAudio() {
-        return audio;
+    public File getBild() {
+        return bild;
     }
+    
 }
