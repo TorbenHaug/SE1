@@ -5,6 +5,10 @@
  */
 package se1_aufgabe2.accounting;
 
+import java.util.ArrayList;
+import java.util.List;
+import se1_aufgabe2.answers.AbgegebeneAntwort;
+
 /**
  *
  * @author ClausTorben
@@ -14,6 +18,7 @@ public class Student {
     private final String akennung;
     private final int matrikelNr;
     private final short semester;
+	private final List<AbgegebeneAntwort> abgegebeneLernkarten = new ArrayList<>();
 
     public Student(String name, String akennung, int matrikelNr, short semester) {
         this.name = name;
@@ -38,4 +43,8 @@ public class Student {
         return semester;
     }
 
+	public List<AbgegebeneAntwort> getAbgegebeneLernkarten()
+	{
+		return abgegebeneLernkarten;
+	}
 }
