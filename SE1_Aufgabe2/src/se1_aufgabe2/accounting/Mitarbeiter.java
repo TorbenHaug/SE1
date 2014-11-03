@@ -5,9 +5,6 @@
  */
 package se1_aufgabe2.accounting;
 
-import java.util.Collection;
-import se1_aufgabe2.answers.AbgegebeneAntwort;
-
 /**
  *
  * @author ClausTorben
@@ -28,10 +25,4 @@ public class Mitarbeiter {
     public int getPersNr() {
         return persNr;
     }
-
-	public Collection<AbgegebeneAntwort> getGeprüfteAntworten()
-	{
-		//TODO todo
-		return null;
-	}
 }
