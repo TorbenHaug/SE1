@@ -5,7 +5,7 @@
  */
 package se1_aufgabe2.cardarchive;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  *
@@ -30,5 +30,17 @@ public class SingleChoice extends Antwort{
 	public void removeAntwortMoeglichkeit(AntwortMoeglichkeit inMoeglichkeit)
 	{
 		this.antwortMoeglichkeiten.remove(inMoeglichkeit);
+	}
+
+	public Collection<AntwortMoeglichkeit> getRichtigeAntworten()
+	{
+		List<AntwortMoeglichkeit> richtig = new ArrayList<>();
+		for(AntwortMoeglichkeit antwortMoeglichkeit : this.antwortMoeglichkeiten)
+		{
+			if(antwortMoeglichkeit.isRichtig())
+				richtig.add(antwortMoeglichkeit);
+		}
+
+		return richtig;
 	}
 }
