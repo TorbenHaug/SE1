@@ -5,11 +5,13 @@
  */
 package se1_aufgabe2.accounting;
 
+import se1_aufgabe2.common.PersistentEntity;
+
 /**
  *
  * @author ClausTorben
  */
-public class Professor {
+public class Professor implements PersistentEntity {
     private final String name;
     private final int perNr;
     private final String hawKennung;

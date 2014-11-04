@@ -5,11 +5,13 @@
  */
 package se1_aufgabe2.cardarchive.antwort;
 
+import se1_aufgabe2.common.PersistentEntity;
+
 /**
  *
  * @author ClausTorben
  */
-public class Antwort {
+public class Antwort implements PersistentEntity {
     public static enum AntwortType{
         MultiChoice,
         SingleChoice,

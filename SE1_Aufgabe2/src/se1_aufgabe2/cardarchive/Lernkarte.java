@@ -9,12 +9,13 @@ import java.util.ArrayList;
 import java.util.UUID;
 import se1_aufgabe2.accounting.Professor;
 import se1_aufgabe2.cardarchive.antwort.Antwort;
+import se1_aufgabe2.common.PersistentEntity;
 
 /**
  *
  * @author ClausTorben
  */
-public class Lernkarte<T extends Antwort> {
+public class Lernkarte<T extends Antwort> implements PersistentEntity {
     private final UUID id;
     private final String frage;
     private final Professor ersteller;

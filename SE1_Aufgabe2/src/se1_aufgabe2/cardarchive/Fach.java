@@ -11,12 +11,13 @@ import java.util.Collection;
 import java.util.List;
 import se1_aufgabe2.accounting.Professor;
 import se1_aufgabe2.cardarchive.antwort.Antwort;
+import se1_aufgabe2.common.PersistentEntity;
 
 /**
  *
  * @author ClausTorben
  */
-public class Fach {
+public class Fach implements PersistentEntity {
     private final String name;
     private final List<Lernkarte> lernkarten;
 

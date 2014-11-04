@@ -5,11 +5,13 @@
  */
 package se1_aufgabe2.cardarchive.antwort;
 
+import se1_aufgabe2.common.PersistentEntity;
+
 /**
  *
  * @author ClausTorben
  */
-public class AntwortMoeglichkeit {
+public class AntwortMoeglichkeit implements PersistentEntity {
     private final String antwort;
     private final boolean richtig;
 

@@ -7,14 +7,15 @@ package se1_aufgabe2.accounting;
 
 import java.util.ArrayList;
 import java.util.List;
-import se1_aufgabe2.accounting.se1_aufgabe2.common.Rate;
+import se1_aufgabe2.common.PersistentEntity;
+import se1_aufgabe2.common.Rate;
 import se1_aufgabe2.answers.AbgegebeneAntwort;
 
 /**
  *
  * @author ClausTorben
  */
-public class Student {
+public class Student implements PersistentEntity {
     private final String name;
     private final String akennung;
     private final int matrikelNr;

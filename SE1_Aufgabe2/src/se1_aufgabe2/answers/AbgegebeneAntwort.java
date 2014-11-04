@@ -7,12 +7,14 @@ package se1_aufgabe2.answers;
 
 import se1_aufgabe2.accounting.Mitarbeiter;
 import se1_aufgabe2.cardarchive.Lernkarte;
+import se1_aufgabe2.common.PersistentEntity;
 
 /**
  *
  * @author ClausTorben
  */
-public class AbgegebeneAntwort {
+public class AbgegebeneAntwort implements PersistentEntity
+{
     private final Object wert;
 	private final Lernkarte lernkarte;
 	private Mitarbeiter geprueftVon;

@@ -6,12 +6,13 @@
 package se1_aufgabe2.cardarchive;
 
 import java.io.File;
+import se1_aufgabe2.common.PersistentEntity;
 
 /**
  *
  * @author ClausTorben
  */
-public class Anhang {
+public class Anhang implements PersistentEntity {
     private File file;
 
     public Anhang(File file) {
