@@ -1,4 +1,4 @@
-package se1_aufgabe2.accounting.se1_aufgabe2.common;
+package se1_aufgabe2.common;
 
 public class Rate
 {
