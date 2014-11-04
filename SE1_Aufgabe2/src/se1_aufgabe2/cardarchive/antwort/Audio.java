@@ -16,10 +16,18 @@ public class Audio extends Antwort {
 
     public Audio(File audio) {
 	    super(AntwortType.Audio);
+	    if(!isValidFile(audio))
+	    	throw new InvalidFileException();
+	    
         this.audio = audio;
     }
 
     public File getAudio() {
         return audio;
+    }
+    
+    public static boolean isValidFile(File inFile)
+    {
+    	return inFile.getName().toLowerCase().matches(".*(mp3|acc)$");
     }
 }

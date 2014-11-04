@@ -11,7 +11,7 @@ import se1_aufgabe2.common.PersistentEntity;
  *
  * @author ClausTorben
  */
-public class Antwort implements PersistentEntity {
+public abstract class Antwort implements PersistentEntity {
     public static enum AntwortType{
         MultiChoice,
         SingleChoice,

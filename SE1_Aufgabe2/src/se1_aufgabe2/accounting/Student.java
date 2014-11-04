@@ -7,6 +7,8 @@ package se1_aufgabe2.accounting;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import se1_aufgabe2.common.EmailType;
 import se1_aufgabe2.common.PersistentEntity;
 import se1_aufgabe2.common.Rate;
 import se1_aufgabe2.answers.AbgegebeneAntwort;
@@ -20,9 +22,9 @@ public class Student implements PersistentEntity {
     private final String akennung;
     private final int matrikelNr;
     private final int semester;
-	private final List<AbgegebeneAntwort> abgegebeneLernkarten = new ArrayList<>();
+    private final EmailType mail;
 
-    public Student(String name, String akennung, int matrikelNr, int semester) {
+    public Student(String name, String akennung, int matrikelNr, int semester, EmailType inEmail) {
 	    if(!isValidKennung(akennung))
 		    throw new InvalidKennungException(akennung + " is not a valid kennung.");
 
@@ -30,6 +32,7 @@ public class Student implements PersistentEntity {
         this.akennung = akennung;
         this.matrikelNr = matrikelNr;
         this.semester = semester;
+        this.mail = inEmail;
     }
 
     public String getName() {
@@ -47,29 +50,12 @@ public class Student implements PersistentEntity {
     public int getSemester() {
         return semester;
     }
-
-	public List<AbgegebeneAntwort> getAbgegebeneLernkarten()
-	{
-		return abgegebeneLernkarten;
-	}
-
-	public Rate getRichtigRate()
-	{
-		int richtig = 0;
-		int alle = 0;
-		for(AbgegebeneAntwort antwort : this.getAbgegebeneLernkarten())
-		{
-			if(antwort.getGeprueftVon() != null)
-			{
-				alle++;
-				if(antwort.isWarRichtig())
-					richtig++;
-			}
-		}
-
-		return Rate.getWithFloatRate(richtig / alle);
-	}
-
+    
+    public EmailType getEmail()
+    {
+    	return this.mail;
+    }
+    
 	public static boolean isValidKennung(String inKennung)
 	{
 		return inKennung.startsWith("a") && inKennung.matches("[a-z]{3}[0-9]{3}");

@@ -16,6 +16,9 @@ public class Bild extends Antwort {
 
     public Bild(File bild) {
 	    super(AntwortType.Bild);
+	    if(!isValidBild(bild))
+	    	throw new InvalidFileException();
+	    
         this.bild = bild;
     }
 
@@ -23,4 +26,8 @@ public class Bild extends Antwort {
         return bild;
     }
     
+    public static boolean isValidBild(File inFile)
+    {
+    	return inFile.getName().toLowerCase().matches(".*(jpg|png|bmp)$");
+    }
 }

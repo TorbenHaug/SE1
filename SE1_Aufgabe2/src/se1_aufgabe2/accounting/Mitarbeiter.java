@@ -5,6 +5,7 @@
  */
 package se1_aufgabe2.accounting;
 
+import se1_aufgabe2.common.EmailType;
 import se1_aufgabe2.common.PersistentEntity;
 
 /**
@@ -14,10 +15,12 @@ import se1_aufgabe2.common.PersistentEntity;
 public class Mitarbeiter implements PersistentEntity{
     private final String name;
     private final int persNr;
+    private final EmailType mail;
 
-    public Mitarbeiter(String name, int persNr) {
+    public Mitarbeiter(String name, int persNr, EmailType inMail) {
         this.name = name;
         this.persNr = persNr;
+        this.mail = inMail;
     }
 
     public String getName() {
@@ -26,5 +29,10 @@ public class Mitarbeiter implements PersistentEntity{
 
     public int getPersNr() {
         return persNr;
+    }
+    
+    public EmailType getEmail()
+    {
+    	return this.mail;
     }
 }

@@ -6,6 +6,8 @@
 package se1_aufgabe2.cardarchive;
 
 import java.io.File;
+
+import se1_aufgabe2.cardarchive.antwort.InvalidFileException;
 import se1_aufgabe2.common.PersistentEntity;
 
 /**
@@ -16,6 +18,9 @@ public class Anhang implements PersistentEntity {
     private File file;
 
     public Anhang(File file) {
+    	if(!isValidAnhang(file))
+    		throw new InvalidFileException();
+    	
         this.file = file;
     }
 
@@ -23,5 +28,8 @@ public class Anhang implements PersistentEntity {
         return file;
     }
     
-    
+    public static boolean isValidAnhang(File inFile)
+    {
+    	return inFile.getName().toLowerCase().matches(".*(jpg|bmp|png|mp3|acc)$");
+    }
 }

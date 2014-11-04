@@ -18,8 +18,8 @@ public interface ICardArchive {
     Collection<Fach> getFaecher();
     Fach createWithName(String inName);
     
-    Lernkarte getLernkarteByID(UUID inID);
-    Collection<Lernkarte> getLernkarten();
+    Lernkarte<? extends Antwort> getLernkarteByID(UUID inID);
+    Collection<Lernkarte<? extends Antwort>> getLernkarten();
     
     Antwort createAntwort(Antwort.AntwortType type);
     
