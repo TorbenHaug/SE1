@@ -7,6 +7,7 @@ package se1_aufgabe2.accounting;
 
 import java.util.ArrayList;
 import java.util.List;
+import se1_aufgabe2.accounting.se1_aufgabe2.common.Rate;
 import se1_aufgabe2.answers.AbgegebeneAntwort;
 
 /**
@@ -51,7 +52,7 @@ public class Student {
 		return abgegebeneLernkarten;
 	}
 
-	public float getRichtigRate()
+	public Rate getRichtigRate()
 	{
 		int richtig = 0;
 		int alle = 0;
@@ -65,7 +66,7 @@ public class Student {
 			}
 		}
 
-		return richtig / alle;
+		return Rate.getWithFloatRate(richtig / alle);
 	}
 
 	public static boolean isValidKennung(String inKennung)
