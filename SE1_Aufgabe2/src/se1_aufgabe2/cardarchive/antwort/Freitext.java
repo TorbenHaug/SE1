@@ -13,9 +13,11 @@ public class Freitext extends Antwort {
     private String antwort;
 
     public Freitext() {
+	    super(AntwortType.Freitext);
     }
     
     public Freitext(String antwort) {
+	    this();
         this.antwort = antwort;
     }
 

@@ -15,6 +15,7 @@ public class Bild extends Antwort {
     private final File bild;
 
     public Bild(File bild) {
+	    super(AntwortType.Bild);
         this.bild = bild;
     }
 

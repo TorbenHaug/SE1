@@ -15,6 +15,7 @@ public class Audio extends Antwort {
     private final File audio;
 
     public Audio(File audio) {
+	    super(AntwortType.Audio);
         this.audio = audio;
     }
 

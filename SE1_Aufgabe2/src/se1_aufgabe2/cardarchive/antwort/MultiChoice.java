@@ -15,6 +15,7 @@ public class MultiChoice extends Antwort {
     private final ArrayList<AntwortMoeglichkeit> antwortMoeglichkeiten;
 
     public MultiChoice(ArrayList<AntwortMoeglichkeit> antwortMoeglichkeiten) {
+	    super(AntwortType.MultiChoice);
         this.antwortMoeglichkeiten = antwortMoeglichkeiten;
     }
 

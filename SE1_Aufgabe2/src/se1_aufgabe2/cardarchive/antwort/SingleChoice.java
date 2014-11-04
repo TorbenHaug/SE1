@@ -15,6 +15,7 @@ public class SingleChoice extends Antwort{
     private final ArrayList<AntwortMoeglichkeit> antwortMoeglichkeiten;
 
     public SingleChoice(ArrayList<AntwortMoeglichkeit> antwortMoeglichkeiten) {
+	    super(AntwortType.SingleChoice);
         this.antwortMoeglichkeiten = antwortMoeglichkeiten;
     }
 

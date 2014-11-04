@@ -19,4 +19,16 @@ public class Antwort implements PersistentEntity {
         Bild,
         Audio
     }
+
+	private final AntwortType type;
+
+	protected Antwort(AntwortType inType)
+	{
+		this.type = inType;
+	}
+
+	public AntwortType getType()
+	{
+		return type;
+	}
 }
