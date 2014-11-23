@@ -45,4 +45,9 @@ public class CardArchive implements ICardArchive {
 		return null;
 	}
 
+	@Override
+	public ICardSelection createSelection(final IFach inFach, final Collection<ILernkarte<? extends IAntwort>> inSelection)
+	{
+		return new CardSelection(inFach, inSelection);
+	}
 }

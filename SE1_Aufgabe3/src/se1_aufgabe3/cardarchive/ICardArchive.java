@@ -23,6 +23,6 @@ public interface ICardArchive {
     Collection<ILernkarte<? extends IAntwort>> getLernkarten();
     
     IAntwort createAntwort(Antwort.AntwortType type);
-    
-    
+
+    ICardSelection createSelection(IFach inFach, Collection<ILernkarte<? extends IAntwort>> inSelection);
 }
