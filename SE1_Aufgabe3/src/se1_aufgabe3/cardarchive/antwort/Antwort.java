@@ -33,4 +33,16 @@ public abstract class Antwort implements PersistentEntity, IAntwort
 	{
 		return type;
 	}
+
+	@Override
+	public boolean isCorrect(final IAntwort inAntwort)
+	{
+		return false;
+	}
+
+	@Override
+	public boolean needsManualCheck()
+	{
+		return true;
+	}
 }

@@ -49,4 +49,29 @@ public class MultiChoice extends Antwort implements IMultiChoiceAntwort
 
 		return richtig;
 	}
+
+	@Override
+	public boolean isCorrect(final IAntwort inAntwort)
+	{
+		if(!(inAntwort instanceof IMultiChoiceAntwort))
+			throw new IncompatibleAnswersException();
+
+		IMultiChoiceAntwort multiChoiceAntwort = (IMultiChoiceAntwort)inAntwort;
+		if(multiChoiceAntwort.getAntwortMoeglichkeiten().size() != this.getAntwortMoeglichkeiten().size())
+			return false;
+
+		for(IAntwortMoeglichkeit moeglichkeit : this.getAntwortMoeglichkeiten())
+		{
+			if(!multiChoiceAntwort.getAntwortMoeglichkeiten().contains(moeglichkeit))
+				return false;
+		}
+
+		return true;
+	}
+
+	@Override
+	public boolean needsManualCheck()
+	{
+		return false;
+	}
 }

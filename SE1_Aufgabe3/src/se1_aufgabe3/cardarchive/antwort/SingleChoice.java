@@ -37,16 +37,30 @@ public class SingleChoice extends Antwort implements ISingleChoiceAntwort
 		this.antwortMoeglichkeiten.remove(inMoeglichkeit);
 	}
 
-	@Override
-	public Collection<IAntwortMoeglichkeit> getRichtigeAntworten()
+	public IAntwortMoeglichkeit getRichtigeAntwort()
 	{
-		List<IAntwortMoeglichkeit> richtig = new ArrayList<>();
 		for(IAntwortMoeglichkeit antwortMoeglichkeit : this.antwortMoeglichkeiten)
 		{
 			if(antwortMoeglichkeit.isRichtig())
-				richtig.add(antwortMoeglichkeit);
+				return antwortMoeglichkeit;
 		}
 
-		return richtig;
+		throw new NoCorrectAnswerException();
+	}
+
+	@Override
+	public boolean isCorrect(final IAntwort inAntwort)
+	{
+		if(!(inAntwort instanceof ISingleChoiceAntwort))
+			throw new IncompatibleAnswersException();
+
+		ISingleChoiceAntwort singleChoiceAntwort = (ISingleChoiceAntwort)inAntwort;
+		return this.getRichtigeAntwort().equals(singleChoiceAntwort.getRichtigeAntwort());
+	}
+
+	@Override
+	public boolean needsManualCheck()
+	{
+		return false;
 	}
 }
