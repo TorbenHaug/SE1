@@ -36,6 +36,6 @@ public class AccountingRegistry implements IAccountingRegistry {
 		if(inUser.equals("abq264") && inPassword.equals("1337H4X0R"))
 			return new Student("Tim Hagemann", "abq264", 2170310, 3, new EmailType("tim.hagemann@haw-hamburg.de"));
 
-		return null;
+		throw new InvalidCredentialsException();
 	}
 }
