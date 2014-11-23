@@ -8,4 +8,6 @@ public interface IAccountingRegistry
 	public IMitarbeiter getMitarbeiterMitPersonalNr(int inNr);
 
 	public IProfessor getProfessorMitPersonalNr(int inNr);
+
+	public IPerson loginAs(String inUser, String inPassword);
 }
