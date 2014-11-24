@@ -4,7 +4,12 @@ import java.sql.*;
 
 public class DatabaseConnection
 {
+	private static final DatabaseConnection instance = new DatabaseConnection();
 	private Connection m_connection;
+
+	private DatabaseConnection()
+	{
+	}
 
 	public boolean connect(String inURL, String inUser, String inPassword)
 	{
@@ -39,5 +44,10 @@ public class DatabaseConnection
 		{
 			return null;
 		}
+	}
+
+	public static DatabaseConnection getInstance()
+	{
+		return instance;
 	}
 }
