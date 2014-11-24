@@ -8,8 +8,7 @@ import se1_aufgabe3.answers.IAnswerRegistry;
 import se1_aufgabe3.cardarchive.*;
 import se1_aufgabe3.cardarchive.antwort.*;
 import se1_aufgabe3.common.AnswerResult;
-import se1_aufgabe3.pruefung.IPruefungControl;
-import se1_aufgabe3.pruefung.IUebung;
+import se1_aufgabe3.pruefung.*;
 
 public class Main
 {
@@ -20,7 +19,7 @@ public class Main
 		ICardArchive cardArchive = new CardArchive(accounting);
 		IAnswerRegistry answerRegistry = new AnswerRegistry(accounting, cardArchive);
 
-		IPruefungControl control = null;
+		IPruefungControl control = new PruefungControl(inAnswerRegistry);
 		IUebung uebung = control.createFor(accounting.getStudentMitKennung("abq264"));
 		IFach fach = cardArchive.getFachByName("Software Engineering");
 		List<ILernkarte<? extends IAntwort>> selectiert = new ArrayList<>();
@@ -60,7 +59,7 @@ public class Main
 			}
 		}
 
-		uebung.finish();
+		control.finishUebung(uebung);
 
 		System.out.println(String.format("Richtig: %d ; Falsch: %d ; Ausstehend: %d", results));
 	}
