@@ -1,10 +1,10 @@
 package se1_aufgabe3.answers;
 
 import java.util.Collection;
-
-import se1_aufgabe2.accounting.*;
 import se1_aufgabe3.accounting.*;
 import se1_aufgabe3.cardarchive.ICardArchive;
+import se1_aufgabe3.cardarchive.ILernkarte;
+import se1_aufgabe3.cardarchive.antwort.IAntwort;
 
 public class AnswerRegistry implements IAnswerRegistry {
 
@@ -29,6 +29,13 @@ public class AnswerRegistry implements IAnswerRegistry {
 	@Override
 	public Collection<IAbgegebeneAntwort> getGepruefteAntwortenVon(IMitarbeiter inMitarbeiter) {
 		return null;
+	}
+
+	@Override
+	public <T extends IAntwort> void saveAnswer(IStudent inStudent, ILernkarte<T> inLernkarte, T inAntwort)
+	{
+		AbgegebeneAntwort<T> antwort = new AbgegebeneAntwort<>(inAntwort, inStudent, inLernkarte);
+		// TODO save
 	}
 
 }

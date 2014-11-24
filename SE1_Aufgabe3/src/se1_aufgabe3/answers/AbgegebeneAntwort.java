@@ -5,19 +5,17 @@
  */
 package se1_aufgabe3.answers;
 
-import se1_aufgabe2.accounting.*;
-import se1_aufgabe3.cardarchive.ILernkarte;
-import se1_aufgabe3.cardarchive.antwort.Antwort;
-import se1_aufgabe3.cardarchive.antwort.IAntwort;
-import se1_aufgabe3.common.PersistentEntity;
 import se1_aufgabe3.accounting.IMitarbeiter;
 import se1_aufgabe3.accounting.IStudent;
+import se1_aufgabe3.cardarchive.ILernkarte;
+import se1_aufgabe3.cardarchive.antwort.IAntwort;
+import se1_aufgabe3.common.PersistentEntity;
 
 /**
  *
  * @author ClausTorben
  */
-public class AbgegebeneAntwort<T extends Antwort> implements PersistentEntity, IAbgegebeneAntwort<T>
+public class AbgegebeneAntwort<T extends IAntwort> implements PersistentEntity, IAbgegebeneAntwort<T>
 {
     private final IAntwort wert;
 	private final ILernkarte<T> lernkarte;
