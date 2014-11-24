@@ -1,7 +1,6 @@
 package se1_aufgabe3.pruefung;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.*;
 import se1_aufgabe3.accounting.IStudent;
 import se1_aufgabe3.cardarchive.ICardSelection;
 import se1_aufgabe3.cardarchive.ILernkarte;
@@ -12,7 +11,7 @@ public class Uebung implements IUebung
 {
 	private ICardSelection m_cardSelection;
 	private final IStudent m_student;
-	private Collection<IAntwort> m_antworten = new ArrayList<>();
+	private Map<ILernkarte<? extends IAntwort>, IAntwort> m_antworten = new HashMap<>();
 
 	public Uebung(IStudent inStudent)
 	{
@@ -52,13 +51,13 @@ public class Uebung implements IUebung
 	@Override
 	public Collection<IAntwort> getAntworten()
 	{
-		return this.m_antworten;
+		return this.m_antworten.values();
 	}
 
 	@Override
 	public AnswerResult addAntwort(IAntwort inAntwort)
 	{
-		this.m_antworten.add(inAntwort);
+		this.m_antworten.put(this.m_cardSelection.getCurrent(), inAntwort);
 		if(!this.m_cardSelection.getCurrent().getAntwort().needsManualCheck())
 			return this.m_cardSelection.getCurrent().getAntwort().isCorrect(inAntwort) ? AnswerResult.CORRECT : AnswerResult.WRONG;
 		else
@@ -66,9 +65,9 @@ public class Uebung implements IUebung
 	}
 
 	@Override
-	public void finish()
+	public Map<ILernkarte<? extends IAntwort>, IAntwort> getAnswersForLernkarten()
 	{
-		//TODO create a new answer
+		return this.m_antworten;
 	}
 
 	@Override
