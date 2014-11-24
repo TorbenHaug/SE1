@@ -1,12 +1,11 @@
 package se1_aufgabe3;
 
-import java.util.*;
 import se1_aufgabe3.accounting.AccountingRegistry;
 import se1_aufgabe3.accounting.IAccountingRegistry;
 import se1_aufgabe3.answers.AnswerRegistry;
 import se1_aufgabe3.answers.IAnswerRegistry;
 import se1_aufgabe3.cardarchive.*;
-import se1_aufgabe3.cardarchive.antwort.*;
+import se1_aufgabe3.cardarchive.antwort.IAntwort;
 import se1_aufgabe3.common.AnswerResult;
 import se1_aufgabe3.pruefung.*;
 
@@ -26,7 +25,8 @@ public class Main
 		while(uebung.canContinue())
 		{
 			ILernkarte<? extends IAntwort> karte = uebung.getNextLernkarte();
-			IAntwort moeglicheAntwort = karte.getAntwort();
+			//TODO move into uebung
+			/*IAntwort moeglicheAntwort = karte.getAntwort();
 			IAntwort eigene = null;
 			if(moeglicheAntwort instanceof ISingleChoiceAntwort)
 			{
@@ -38,13 +38,10 @@ public class Main
 				List<IAntwortMoeglichkeit> liste = new ArrayList<IAntwortMoeglichkeit>();
 				liste.add(((IMultiChoiceAntwort)moeglicheAntwort).getAntwortMoeglichkeiten().get(0));
 				eigene = cardArchive.prepareAnswer(karte, liste);
-			}
+			}*/
 
-			if(eigene != null)
-			{
-				AnswerResult result = uebung.addAntwort(eigene);
-				results[result.ordinal()]++;
-			}
+			AnswerResult result = uebung.setAnswer(0);
+			results[result.ordinal()]++;
 		}
 
 		control.finishUebung(uebung);

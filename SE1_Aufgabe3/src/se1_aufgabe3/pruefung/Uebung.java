@@ -54,8 +54,9 @@ public class Uebung implements IUebung
 		return this.m_antworten.values();
 	}
 
+	//TODO
 	@Override
-	public AnswerResult addAntwort(IAntwort inAntwort)
+	public AnswerResult setAnswer(Object inAntwort)
 	{
 		this.m_antworten.put(this.m_cardSelection.getCurrent(), inAntwort);
 		if(!this.m_cardSelection.getCurrent().getAntwort().needsManualCheck())
