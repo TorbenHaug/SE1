@@ -21,7 +21,7 @@ public class CardArchive implements ICardArchive {
 	
 	@Override
 	public IFach getFachByName(String inName) {
-		return new Fach(inName);
+		return new Fach(inName, inArchive);
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class CardArchive implements ICardArchive {
 
 	@Override
 	public IFach createFachWithName(String inName) {
-		return new Fach(inName);
+		return new Fach(inName, inArchive);
 	}
 
 	@Override

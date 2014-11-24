@@ -1,9 +1,10 @@
 package se1_aufgabe3.pruefung;
 
+import java.util.Collection;
 import java.util.Map;
 import se1_aufgabe3.accounting.IStudent;
 import se1_aufgabe3.answers.IAnswerRegistry;
-import se1_aufgabe3.cardarchive.ILernkarte;
+import se1_aufgabe3.cardarchive.*;
 import se1_aufgabe3.cardarchive.antwort.IAntwort;
 
 public class PruefungControl implements IPruefungControl
@@ -16,9 +17,11 @@ public class PruefungControl implements IPruefungControl
 	}
 
 	@Override
-	public IUebung createFor(IStudent inStudent)
+	public IUebung createFor(IStudent inStudent, IFach inFach, Collection<ILernkarte<? extends IAntwort>> inLernkarten)
 	{
-		return new Uebung(inStudent);
+		IUebung uebung = new Uebung(inStudent);
+		uebung.addLernkarten(new CardSelection(inFach, inFach.getLernkarten()));
+		return uebung;
 	}
 
 	@Override

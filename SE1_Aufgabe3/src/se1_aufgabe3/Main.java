@@ -20,20 +20,8 @@ public class Main
 		IAnswerRegistry answerRegistry = new AnswerRegistry(accounting, cardArchive);
 
 		IPruefungControl control = new PruefungControl(answerRegistry);
-		IUebung uebung = control.createFor(accounting.getStudentMitKennung("abq264"));
 		IFach fach = cardArchive.getFachByName("Software Engineering");
-		List<ILernkarte<? extends IAntwort>> selectiert = new ArrayList<>();
-		for(ILernkarte<? extends IAntwort> lernkarte : cardArchive.getLernkarten())
-		{
-			if(!lernkarte.getFach().equals(fach))
-				continue;
-
-			if(lernkarte.getAntwort() instanceof ISingleChoiceAntwort || lernkarte instanceof IMultiChoiceAntwort)
-				selectiert.add(lernkarte);
-		}
-
-		ICardSelection selection = cardArchive.createSelection(fach, selectiert);
-		uebung.addLernkarten(selection);
+		IUebung uebung = control.createFor(accounting.getStudentMitKennung("abq264"), fach, fach.getLernkarten());
 		int[] results = { 0, 0, 0 };
 		while(uebung.canContinue())
 		{

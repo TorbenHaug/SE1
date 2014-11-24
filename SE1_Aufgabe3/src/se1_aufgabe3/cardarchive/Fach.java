@@ -8,7 +8,7 @@ package se1_aufgabe3.cardarchive;
 import java.io.File;
 import java.util.*;
 import se1_aufgabe3.accounting.IProfessor;
-import se1_aufgabe3.cardarchive.antwort.Antwort;
+import se1_aufgabe3.cardarchive.antwort.*;
 import se1_aufgabe3.common.PersistentEntity;
 
 /**
@@ -18,11 +18,11 @@ import se1_aufgabe3.common.PersistentEntity;
 public class Fach implements PersistentEntity, IFach
 {
     private final String name;
-    private final List<ILernkarte> lernkarten;
+    private final ICardArchive archive;
 
-    public Fach(String name){
+    public Fach(String name, final ICardArchive inArchive){
         this.name = name;
-        this.lernkarten = loadFromDB();
+        archive = inArchive;
     }
     
     @Override
@@ -31,14 +31,22 @@ public class Fach implements PersistentEntity, IFach
     }
     
     @Override
-    public Collection<ILernkarte> getLernkarten()
+    public Collection<ILernkarte<? extends IAntwort>> getLernkarten()
     {
-        return null;
+        return this.loadFromDB();
     }
      
-    private List<ILernkarte> loadFromDB(){
-        //funktion to load
-        return new ArrayList<>();
+    private List<ILernkarte<? extends IAntwort>> loadFromDB(){
+        List<ILernkarte<? extends IAntwort>> selectiert = new ArrayList<>();
+        for(ILernkarte<? extends IAntwort> lernkarte : this.archive.getLernkarten())
+        {
+            if(!lernkarte.getFach().getName().equals(this.getName()))
+                continue;
+
+            if(lernkarte.getAntwort() instanceof ISingleChoiceAntwort || lernkarte instanceof IMultiChoiceAntwort)
+                selectiert.add(lernkarte);
+        }
+        return selectiert;
     }
     
     @Override
