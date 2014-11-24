@@ -3,7 +3,9 @@ package se1_aufgabe3.pruefung;
 import java.util.Collection;
 import se1_aufgabe3.accounting.IStudent;
 import se1_aufgabe3.cardarchive.ICardSelection;
+import se1_aufgabe3.cardarchive.ILernkarte;
 import se1_aufgabe3.cardarchive.antwort.IAntwort;
+import se1_aufgabe3.common.AnswerResult;
 
 public interface IUebung
 {
@@ -12,7 +14,8 @@ public interface IUebung
 	boolean isOver();
 	boolean canContinue();
 	boolean isUebung();
+	ILernkarte<? extends IAntwort> getNextLernkarte();
 	Collection<IAntwort> getAntworten();
-	void addAntwort(IAntwort inAntwort);
+	AnswerResult addAntwort(IAntwort inAntwort);
 	void finish();
 }

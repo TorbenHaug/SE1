@@ -13,15 +13,15 @@ import java.util.*;
  */
 public class MultiChoice extends Antwort implements IMultiChoiceAntwort
 {
-    private final ArrayList<IAntwortMoeglichkeit> antwortMoeglichkeiten;
+    private final List<IAntwortMoeglichkeit> antwortMoeglichkeiten;
 
-    public MultiChoice(ArrayList<IAntwortMoeglichkeit> antwortMoeglichkeiten) {
+    public MultiChoice(List<IAntwortMoeglichkeit> antwortMoeglichkeiten) {
 	    super(AntwortType.MultiChoice);
         this.antwortMoeglichkeiten = antwortMoeglichkeiten;
     }
 
     @Override
-    public ArrayList<IAntwortMoeglichkeit> getAntwortMoeglichkeiten() {
+    public List<IAntwortMoeglichkeit> getAntwortMoeglichkeiten() {
         return antwortMoeglichkeiten;
     }
 	

@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import se1_aufgabe3.accounting.IStudent;
 import se1_aufgabe3.cardarchive.ICardSelection;
+import se1_aufgabe3.cardarchive.ILernkarte;
 import se1_aufgabe3.cardarchive.antwort.IAntwort;
+import se1_aufgabe3.common.AnswerResult;
 
 public class Uebung implements IUebung
 {
@@ -54,14 +56,24 @@ public class Uebung implements IUebung
 	}
 
 	@Override
-	public void addAntwort(IAntwort inAntwort)
+	public AnswerResult addAntwort(IAntwort inAntwort)
 	{
 		this.m_antworten.add(inAntwort);
+		if(!this.m_cardSelection.getCurrent().getAntwort().needsManualCheck())
+			return this.m_cardSelection.getCurrent().getAntwort().isCorrect(inAntwort) ? AnswerResult.CORRECT : AnswerResult.WRONG;
+		else
+			return AnswerResult.PENDING;
 	}
 
 	@Override
 	public void finish()
 	{
 		//TODO create a new answer
+	}
+
+	@Override
+	public ILernkarte<? extends IAntwort> getNextLernkarte()
+	{
+		return this.m_cardSelection.getNext();
 	}
 }

@@ -25,4 +25,6 @@ public interface ICardArchive {
     IAntwort createAntwort(Antwort.AntwortType type);
 
     ICardSelection createSelection(IFach inFach, Collection<ILernkarte<? extends IAntwort>> inSelection);
+
+    <T extends IAntwort> T prepareAnswer(ILernkarte<T> inKarte, Object inValue);
 }

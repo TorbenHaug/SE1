@@ -13,15 +13,15 @@ import java.util.*;
  */
 public class SingleChoice extends Antwort implements ISingleChoiceAntwort
 {
-    private final ArrayList<IAntwortMoeglichkeit> antwortMoeglichkeiten;
+    private final List<IAntwortMoeglichkeit> antwortMoeglichkeiten;
 
-    public SingleChoice(ArrayList<IAntwortMoeglichkeit> antwortMoeglichkeiten) {
+    public SingleChoice(List<IAntwortMoeglichkeit> antwortMoeglichkeiten) {
 	    super(AntwortType.SingleChoice);
         this.antwortMoeglichkeiten = antwortMoeglichkeiten;
     }
 
     @Override
-    public ArrayList<IAntwortMoeglichkeit> getAntwortMoeglichkeiten() {
+    public List<IAntwortMoeglichkeit> getAntwortMoeglichkeiten() {
         return antwortMoeglichkeiten;
     }
 

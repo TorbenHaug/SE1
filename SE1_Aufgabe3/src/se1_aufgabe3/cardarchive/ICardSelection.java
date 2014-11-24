@@ -8,4 +8,5 @@ public interface ICardSelection
 	IFach getFach();
 	Collection<ILernkarte<? extends IAntwort>> getLernkarten();
 	ILernkarte<? extends IAntwort> getNext();
+	ILernkarte<? extends IAntwort> getCurrent();
 }

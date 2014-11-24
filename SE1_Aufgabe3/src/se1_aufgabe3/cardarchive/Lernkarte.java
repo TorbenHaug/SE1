@@ -8,19 +8,19 @@ package se1_aufgabe3.cardarchive;
 import java.util.ArrayList;
 import java.util.UUID;
 import se1_aufgabe3.accounting.IProfessor;
-import se1_aufgabe3.cardarchive.antwort.Antwort;
+import se1_aufgabe3.cardarchive.antwort.IAntwort;
 import se1_aufgabe3.common.PersistentEntity;
 
 /**
  *
  * @author ClausTorben
  */
-public class Lernkarte<T extends Antwort> implements PersistentEntity, ILernkarte<T>
+public class Lernkarte<T extends IAntwort> implements PersistentEntity, ILernkarte<T>
 {
     private final UUID id;
     private final String frage;
     private final IProfessor ersteller;
-    private final T antwort;
+    private T antwort;
     private final ArrayList<IAnhang> anhaenge;
     private final IFach fach;
 
@@ -46,6 +46,11 @@ public class Lernkarte<T extends Antwort> implements PersistentEntity, ILernkart
     @Override
     public T getAntwort() {
         return antwort;
+    }
+
+    public void setAntwort(T inAntwort)
+    {
+        this.antwort = inAntwort;
     }
 
     @Override

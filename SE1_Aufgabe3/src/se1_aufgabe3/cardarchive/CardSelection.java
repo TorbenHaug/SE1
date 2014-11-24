@@ -9,6 +9,7 @@ public class CardSelection implements ICardSelection
 	private final IFach m_fach;
 	private final Collection<ILernkarte<? extends IAntwort>> m_lernkarten;
 	private final Iterator<ILernkarte<? extends IAntwort>> m_iterator;
+	private ILernkarte<? extends IAntwort> m_current;
 
 	public CardSelection(final IFach inFach, final Collection<ILernkarte<? extends IAntwort>> inLernkarten)
 	{
@@ -35,6 +36,13 @@ public class CardSelection implements ICardSelection
 		if(!this.m_iterator.hasNext())
 			return null;
 
-		return this.m_iterator.next();
+		this.m_current = this.m_iterator.next();
+		return this.m_current;
+	}
+
+	@Override
+	public ILernkarte<? extends IAntwort> getCurrent()
+	{
+		return this.m_current;
 	}
 }

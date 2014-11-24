@@ -11,23 +11,23 @@ public class AccountingRegistry implements IAccountingRegistry {
 	
 	@Override
 	public IStudent getStudentMitKennung(String inKennung) {
-		return null;
+		return new Student("Tim Hagemann", inKennung, 2170310, 3, new EmailType("tim.hagemann@haw-hamburg.de"));
 	}
 
 	@Override
 	public IStudent getStudentMitMatrikelNr(int inNummer) {
-		return null;
+		return new Student("Tim Hagemann", "abq264", inNummer, 3, new EmailType("tim.hagemann@haw-hamburg.de"));
 	}
 
 	@Override
 	public IMitarbeiter getMitarbeiterMitPersonalNr(int inNr) {
-		return null;
+		return new Mitarbeiter("Fritz Wurst", inNr, new EmailType("fritz.wurst@haw-hamburg.de"));
 	}
 
 	@Override
 	public IProfessor getProfessorMitPersonalNr(int inNr) {
 
-		return null;
+		return new Professor("Hans Wurst", inNr, "hans.wurst", new EmailType("hans.wurst@haw-hamburg.de"));
 	}
 
 	@Override

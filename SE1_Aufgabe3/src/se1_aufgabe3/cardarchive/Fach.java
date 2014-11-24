@@ -49,4 +49,23 @@ public class Fach implements PersistentEntity, IFach
         }
         getLernkarten().add(new Lernkarte<>(frage, professor, antwort, anhaenge, this));
     }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+
+        Fach fach = (Fach)o;
+
+        if(!name.equals(fach.name)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return name.hashCode();
+    }
 }
