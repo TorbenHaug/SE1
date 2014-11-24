@@ -14,4 +14,5 @@ public interface IUebung
 	boolean isUebung();
 	Collection<IAntwort> getAntworten();
 	void addAntwort(IAntwort inAntwort);
+	void finish();
 }

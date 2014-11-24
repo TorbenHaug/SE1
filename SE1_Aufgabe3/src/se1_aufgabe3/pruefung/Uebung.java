@@ -58,4 +58,10 @@ public class Uebung implements IUebung
 	{
 		this.m_antworten.add(inAntwort);
 	}
+
+	@Override
+	public void finish()
+	{
+		//TODO create a new answer
+	}
 }
