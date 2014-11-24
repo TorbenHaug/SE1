@@ -60,6 +60,8 @@ public class Main
 			}
 		}
 
+		uebung.finish();
+
 		System.out.println(String.format("Richtig: %d ; Falsch: %d ; Ausstehend: %d", results));
 	}
 }
