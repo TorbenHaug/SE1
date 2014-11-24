@@ -32,7 +32,7 @@ public class AnswerRegistry implements IAnswerRegistry {
 	}
 
 	@Override
-	public <T extends IAntwort> void saveAnswer(IStudent inStudent, ILernkarte<T> inLernkarte, T inAntwort)
+	public <T extends IAntwort> void saveAnswer(IStudent inStudent, ILernkarte<T> inLernkarte, IAntwort inAntwort)
 	{
 		AbgegebeneAntwort<T> antwort = new AbgegebeneAntwort<>(inAntwort, inStudent, inLernkarte);
 		// TODO save

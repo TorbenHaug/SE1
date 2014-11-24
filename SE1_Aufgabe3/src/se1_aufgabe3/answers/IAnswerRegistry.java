@@ -14,5 +14,5 @@ public interface IAnswerRegistry
 
 	public Collection<IAbgegebeneAntwort> getGepruefteAntwortenVon(IMitarbeiter inMitarbeiter);
 
-	public <T  extends IAntwort> void saveAnswer(IStudent inStudent, ILernkarte<T> inLernkarte, T inAntwort);
+	public <T extends IAntwort> void saveAnswer(IStudent inStudent, ILernkarte<T> inLernkarte, IAntwort inAntwort);
 }
