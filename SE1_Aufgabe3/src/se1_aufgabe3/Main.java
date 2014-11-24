@@ -28,7 +28,7 @@ public class Main
 			if(!lernkarte.getFach().equals(fach))
 				continue;
 
-			if(lernkarte.getAntwort() instanceof SingleChoice || lernkarte instanceof MultiChoice)
+			if(lernkarte.getAntwort() instanceof ISingleChoiceAntwort || lernkarte instanceof IMultiChoiceAntwort)
 				selectiert.add(lernkarte);
 		}
 
