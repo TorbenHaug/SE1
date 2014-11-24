@@ -4,7 +4,7 @@ import java.util.*;
 import se1_aufgabe3.accounting.IStudent;
 import se1_aufgabe3.cardarchive.ICardSelection;
 import se1_aufgabe3.cardarchive.ILernkarte;
-import se1_aufgabe3.cardarchive.antwort.IAntwort;
+import se1_aufgabe3.cardarchive.antwort.*;
 import se1_aufgabe3.common.AnswerResult;
 
 public class Uebung implements IUebung
@@ -54,13 +54,20 @@ public class Uebung implements IUebung
 		return this.m_antworten.values();
 	}
 
-	//TODO
 	@Override
 	public AnswerResult setAnswer(Object inAntwort)
 	{
-		this.m_antworten.put(this.m_cardSelection.getCurrent(), inAntwort);
+		IAntwort moeglicheAntwort = this.m_cardSelection.getCurrent().getAntwort();
+		IAntwort neueAntwort = null;
+		if(moeglicheAntwort instanceof ISingleChoiceAntwort)
+		{
+			IAntwortMoeglichkeit gewaehlt = ((ISingleChoiceAntwort)moeglicheAntwort).getAntwortMoeglichkeiten().get((Integer)inAntwort);
+			neueAntwort = this.m_cardSelection.getCurrent().prepareAnswer(gewaehlt);
+		}
+
+		this.m_antworten.put(this.m_cardSelection.getCurrent(), neueAntwort);
 		if(!this.m_cardSelection.getCurrent().getAntwort().needsManualCheck())
-			return this.m_cardSelection.getCurrent().getAntwort().isCorrect(inAntwort) ? AnswerResult.CORRECT : AnswerResult.WRONG;
+			return this.m_cardSelection.getCurrent().getAntwort().isCorrect(neueAntwort) ? AnswerResult.CORRECT : AnswerResult.WRONG;
 		else
 			return AnswerResult.PENDING;
 	}
