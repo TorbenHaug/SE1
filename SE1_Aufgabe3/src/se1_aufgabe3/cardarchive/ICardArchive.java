@@ -69,5 +69,12 @@ public interface ICardArchive {
      */
     ICardSelection createSelection(IFach inFach, Collection<ILernkarte<? extends IAntwort>> inSelection);
 
+    /**
+     * Prototye Generator für Lernkarten
+     * 
+     * @param inKarte - Bearbeitete Lernkarte
+     * @param inValue - Antwort wert des Users
+     * @return
+     */
     <T extends IAntwort> T prepareAnswer(ILernkarte<T> inKarte, Object inValue);
 }
