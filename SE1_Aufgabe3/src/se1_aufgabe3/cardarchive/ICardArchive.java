@@ -16,7 +16,7 @@ import se1_aufgabe3.cardarchive.antwort.IAntwort;
  */
 public interface ICardArchive {
 	/**
-	 * gibt ein Fach anhand seines Namens zurück
+	 * gibt ein Fach anhand seines Namens zurï¿½ck
 	 * 
 	 * @param inName
 	 * @return IFach
@@ -24,7 +24,7 @@ public interface ICardArchive {
     IFach getFachByName(String inName);
     
     /**
-     * Gibt alle registrierten Fächer zurück
+     * Gibt alle registrierten Fï¿½cher zurï¿½ck
      * 
      * @return Collection<IFach>
      */
@@ -35,10 +35,10 @@ public interface ICardArchive {
      * @param inName
      * @return
      */
-    IFach createWithName(String inName);
+    IFach createFachWithName(String inName);
     
     /**
-     * Gibt eine Lernkarte anhand seiner UUID zurück
+     * Gibt eine Lernkarte anhand seiner UUID zurï¿½ck
      * 
      * @param inID
      * @return ILernkarte<? extends IAntwort>
@@ -46,7 +46,7 @@ public interface ICardArchive {
     ILernkarte<? extends IAntwort> getLernkarteByID(UUID inID);
     
     /**
-     * Gibt alle Lernkarten zurück 
+     * Gibt alle Lernkarten zurï¿½ck 
      * 
      * @return Collection<ILernkarte<? extends IAntwort>>
      */
