@@ -19,7 +19,7 @@ public class Main
 		ICardArchive cardArchive = new CardArchive(accounting);
 		IAnswerRegistry answerRegistry = new AnswerRegistry(accounting, cardArchive);
 
-		IPruefungControl control = new PruefungControl(inAnswerRegistry);
+		IPruefungControl control = new PruefungControl(answerRegistry);
 		IUebung uebung = control.createFor(accounting.getStudentMitKennung("abq264"));
 		IFach fach = cardArchive.getFachByName("Software Engineering");
 		List<ILernkarte<? extends IAntwort>> selectiert = new ArrayList<>();
