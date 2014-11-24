@@ -27,8 +27,6 @@ public class Main
 			results[result.ordinal()]++;
 		}
 
-		control.finishUebung(uebung);
-
 		System.out.println(String.format("Richtig: %d ; Falsch: %d ; Ausstehend: %d", results));
 	}
 }

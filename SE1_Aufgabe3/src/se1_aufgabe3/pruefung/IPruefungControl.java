@@ -9,6 +9,4 @@ import se1_aufgabe3.cardarchive.antwort.IAntwort;
 public interface IPruefungControl
 {
 	IUebung createFor(IStudent inStudent, IFach inFach, Collection<ILernkarte<? extends IAntwort>> inLerkarten);
-
-	void finishUebung(IUebung inUebung);
 }
