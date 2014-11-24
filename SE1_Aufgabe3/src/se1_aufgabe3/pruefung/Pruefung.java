@@ -1,13 +1,14 @@
 package se1_aufgabe3.pruefung;
 
 import se1_aufgabe3.accounting.IStudent;
+import se1_aufgabe3.answers.IAnswerRegistry;
 import se1_aufgabe3.common.AnswerResult;
 
 public class Pruefung extends Uebung
 {
-	public Pruefung(IStudent inStudent)
+	public Pruefung(IStudent inStudent, IAnswerRegistry inAnswerRegistry)
 	{
-		super(inStudent);
+		super(inStudent, inAnswerRegistry);
 	}
 
 	@Override
