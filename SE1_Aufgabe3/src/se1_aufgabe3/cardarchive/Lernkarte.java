@@ -5,10 +5,10 @@
  */
 package se1_aufgabe3.cardarchive;
 
-import java.util.ArrayList;
-import java.util.UUID;
+import java.io.File;
+import java.util.*;
 import se1_aufgabe3.accounting.IProfessor;
-import se1_aufgabe3.cardarchive.antwort.IAntwort;
+import se1_aufgabe3.cardarchive.antwort.*;
 import se1_aufgabe3.common.PersistentEntity;
 
 /**
@@ -66,5 +66,41 @@ public class Lernkarte<T extends IAntwort> implements PersistentEntity, ILernkar
     @Override
     public IFach getFach() {
         return fach;
+    }
+
+    @Override
+    public T prepareAnswer(final Object inValue)
+    {
+        T moeglicheAntwort = this.getAntwort();
+        if(moeglicheAntwort instanceof ISingleChoiceAntwort)
+        {
+            List<IAntwortMoeglichkeit> antwortAuswahl = new ArrayList<>();
+            antwortAuswahl.add(new AntwortMoeglichkeit(((IAntwortMoeglichkeit)inValue).getAntwort(), true));
+            return (T)new SingleChoice(antwortAuswahl);
+        }
+        else if(moeglicheAntwort instanceof IMultiChoiceAntwort)
+        {
+            List<IAntwortMoeglichkeit> antwortAuswahl = new ArrayList<>();
+            List<IAntwortMoeglichkeit> gewaehlt = (List)inValue;
+            for(IAntwortMoeglichkeit moeglichkeit : gewaehlt)
+            {
+                antwortAuswahl.add(new AntwortMoeglichkeit(moeglichkeit.getAntwort(), true));
+            }
+            return (T)new MultiChoice(antwortAuswahl);
+        }
+        else if(moeglicheAntwort instanceof IFreitextAntwort)
+        {
+            return (T)new Freitext((String)inValue);
+        }
+        else if(moeglicheAntwort instanceof IAudioAntwort)
+        {
+            return (T)new Audio(new File((String)inValue));
+        }
+        else if(moeglicheAntwort instanceof IBildAntwort)
+        {
+            return (T)new Bild(new File((String)inValue));
+        }
+
+        return null;
     }
 }

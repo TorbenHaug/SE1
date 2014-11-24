@@ -13,4 +13,5 @@ public interface ILernkarte<T extends IAntwort>
 	ArrayList<IAnhang> getAnhaenge();
 	UUID getId();
 	IFach getFach();
+	T prepareAnswer(Object inValue);
 }

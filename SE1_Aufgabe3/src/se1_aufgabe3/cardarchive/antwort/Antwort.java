@@ -13,7 +13,7 @@ import se1_aufgabe3.common.PersistentEntity;
  */
 public abstract class Antwort implements PersistentEntity, IAntwort
 {
-    public static enum AntwortType{
+    public static enum AntwortType {
         MultiChoice,
         SingleChoice,
         Freitext,

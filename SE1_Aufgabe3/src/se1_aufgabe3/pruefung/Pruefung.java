@@ -1,7 +1,6 @@
 package se1_aufgabe3.pruefung;
 
 import se1_aufgabe3.accounting.IStudent;
-import se1_aufgabe3.cardarchive.antwort.IAntwort;
 import se1_aufgabe3.common.AnswerResult;
 
 public class Pruefung extends Uebung
@@ -18,9 +17,9 @@ public class Pruefung extends Uebung
 	}
 
 	@Override
-	public AnswerResult addAntwort(IAntwort inAntwort)
+	public AnswerResult setAnswer(Object inAntwort)
 	{
-		super.addAntwort(inAntwort);
+		super.setAnswer(inAntwort);
 		return AnswerResult.PENDING;
 	}
 }

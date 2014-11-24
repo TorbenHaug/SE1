@@ -17,6 +17,6 @@ public interface IUebung
 	boolean isUebung();
 	ILernkarte<? extends IAntwort> getNextLernkarte();
 	Collection<IAntwort> getAntworten();
-	AnswerResult addAntwort(IAntwort inAntwort);
+	AnswerResult setAnswer(Object inAntwort);
 	Map<ILernkarte<? extends IAntwort>, IAntwort> getAnswersForLernkarten();
 }

@@ -21,17 +21,20 @@ public class CardArchive implements ICardArchive {
 	
 	@Override
 	public IFach getFachByName(String inName) {
-		return new Fach(inName);
+		return new Fach(inName, this);
 	}
 
 	@Override
-	public Collection<IFach> getFaecher() {
-		return null;
+	public Collection<IFach> getFaecher()
+	{
+		List<IFach> faecher = new ArrayList<>();
+		faecher.add(this.createFachWithName("Software Engineering"));
+		return faecher;
 	}
 
 	@Override
-	public IFach createWithName(String inName) {
-		return new Fach(inName);
+	public IFach createFachWithName(String inName) {
+		return new Fach(inName, this);
 	}
 
 	@Override
