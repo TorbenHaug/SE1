@@ -7,8 +7,10 @@ package se1_aufgabe3.cardarchive;
 
 import java.io.File;
 import java.util.*;
+
 import se1_aufgabe3.accounting.IProfessor;
 import se1_aufgabe3.cardarchive.antwort.*;
+import se1_aufgabe3.cardarchive.antwort.Antwort.AntwortType;
 import se1_aufgabe3.common.PersistentEntity;
 
 /**
@@ -103,4 +105,9 @@ public class Lernkarte<T extends IAntwort> implements PersistentEntity, ILernkar
 
         return null;
     }
+
+	@Override
+	public AntwortType getType() {
+		return this.antwort.getType();
+	}
 }

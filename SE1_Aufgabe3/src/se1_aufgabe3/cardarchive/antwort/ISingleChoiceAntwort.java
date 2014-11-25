@@ -2,10 +2,13 @@ package se1_aufgabe3.cardarchive.antwort;
 
 import java.util.List;
 
+/**
+ * SingleChoiceAntwortKlasse
+ */
 public interface ISingleChoiceAntwort
 {
 	/**
-	 * Gibt eine Liste der möglichen antworten zurück
+	 * Gibt eine Liste der moeglichen antworten zurueck
 	 * @return
 	 */
 	List<IAntwortMoeglichkeit> getAntwortMoeglichkeiten();
