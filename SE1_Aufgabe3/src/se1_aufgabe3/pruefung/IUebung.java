@@ -19,7 +19,7 @@ public interface IUebung
 	boolean canContinue();
 	boolean isUebung();
 	/**
-	 * Gibt die nächste nochnicht beantwortete Lernkarte zurück
+	 * Gibt die nächste noch nicht beantwortete Lernkarte zurück
 	 * 
 	 * @return
 	 */
