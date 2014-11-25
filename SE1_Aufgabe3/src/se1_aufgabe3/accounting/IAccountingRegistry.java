@@ -1,5 +1,9 @@
 package se1_aufgabe3.accounting;
 
+/**
+ * Zentrale Benuterverwaltung.
+ * Interagiert mit LDAP der HAW
+ */
 public interface IAccountingRegistry
 {
 	/**

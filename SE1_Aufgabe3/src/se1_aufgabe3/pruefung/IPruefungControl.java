@@ -6,6 +6,9 @@ import se1_aufgabe3.cardarchive.IFach;
 import se1_aufgabe3.cardarchive.ILernkarte;
 import se1_aufgabe3.cardarchive.antwort.IAntwort;
 
+/**
+ * Verwaltet laufende Pruefungen und Uebungen von Studenten
+ */
 public interface IPruefungControl
 {
 	/**

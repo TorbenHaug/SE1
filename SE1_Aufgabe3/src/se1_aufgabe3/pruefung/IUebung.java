@@ -16,6 +16,11 @@ public interface IUebung
 	void addLernkarten(ICardSelection inCardSelection);
 	IStudent getStudent();
 	boolean isOver();
+	/**
+	 * Prueft ob noch weitere unbeantwortete Lerkarten vorhanden sind.
+	 * 
+	 * @return
+	 */
 	boolean canContinue();
 	boolean isUebung();
 	/**
