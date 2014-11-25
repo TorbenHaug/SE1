@@ -8,5 +8,13 @@ import se1_aufgabe3.cardarchive.antwort.IAntwort;
 
 public interface IPruefungControl
 {
+	/**
+	 * Erstellt eine neue Übung/Prüfung für einen Studenten
+	 * 
+	 * @param inStudent - Eingelogter Student 
+	 * @param inFach - Ausgwähltes Fach
+	 * @param inLerkarten - Ausgewählte Lernkarten
+	 * @return IUebung
+	 */
 	IUebung createFor(IStudent inStudent, IFach inFach, Collection<ILernkarte<? extends IAntwort>> inLerkarten);
 }

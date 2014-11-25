@@ -7,7 +7,10 @@ import se1_aufgabe3.cardarchive.ICardSelection;
 import se1_aufgabe3.cardarchive.ILernkarte;
 import se1_aufgabe3.cardarchive.antwort.IAntwort;
 import se1_aufgabe3.common.AnswerResult;
-
+/**
+ * UbungsKlasse, stellt die funktionen fur eine laufende Übung bereit 
+ *
+ */
 public interface IUebung
 {
 	void addLernkarten(ICardSelection inCardSelection);
@@ -15,8 +18,20 @@ public interface IUebung
 	boolean isOver();
 	boolean canContinue();
 	boolean isUebung();
+	/**
+	 * Gibt die nächste nochnicht beantwortete Lernkarte zurück
+	 * 
+	 * @return
+	 */
 	ILernkarte<? extends IAntwort> getNextLernkarte();
 	Collection<IAntwort> getAntworten();
+	/**
+	 * Überträgt die Antwort des Nutzers an die Übung
+	 *  
+	 * @param inAntwort - Antwort des Nutzers
+	 * @return
+	 */
 	AnswerResult setAnswer(Object inAntwort);
+	
 	Map<ILernkarte<? extends IAntwort>, IAntwort> getAnswersForLernkarten();
 }
