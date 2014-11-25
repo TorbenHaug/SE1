@@ -38,9 +38,9 @@ public interface IAnswerRegistry
 	/**
 	 * Speichert eine gegebene Antwort.
 	 * 
-	 * @param inStudent
-	 * @param inLernkarte
-	 * @param inAntwort
+	 * @param inStudent - Der die lernkarte bearbeitet hat
+	 * @param inLernkarte - Lernkarte die bearbeitet worden ist
+	 * @param inAntwort - Antwort, die gegeben wurde
 	 */
 	public <T extends IAntwort> void saveAnswer(IStudent inStudent, ILernkarte<T> inLernkarte, IAntwort inAntwort);
 }
