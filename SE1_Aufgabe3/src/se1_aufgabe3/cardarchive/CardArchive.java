@@ -13,7 +13,6 @@ import se1_aufgabe3.db.DatabaseConnection;
 public class CardArchive implements ICardArchive {
 
 	private final IAccountingRegistry accounting;
-	private DatabaseConnection db;
 	
 	public CardArchive(IAccountingRegistry inAccounting) {
 		this.accounting = inAccounting;
@@ -45,7 +44,7 @@ public class CardArchive implements ICardArchive {
 	@Override
 	public Collection<ILernkarte<? extends IAntwort>> getLernkarten() {
 		String select = "SELECT * FROM lernkarten";
-		ResultSet result = this.db.exec(select);
+		ResultSet result = DatabaseConnection.getInstance().exec(select);
 		List<ILernkarte<? extends IAntwort>> lernkarten = new ArrayList<>();
 		try
 		{

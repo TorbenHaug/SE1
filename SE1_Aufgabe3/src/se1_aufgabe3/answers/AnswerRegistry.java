@@ -41,11 +41,7 @@ public class AnswerRegistry implements IAnswerRegistry {
 		{
 			for(IAntwortMoeglichkeit moeglichkeit : ((ISingleChoiceAntwort)inAntwort).getAntwortMoeglichkeiten())
 			{
-				query.append(moeglichkeit.getAntwort());
-				if(moeglichkeit.isRichtig())
-					query.append("+");
-
-				query.append(";");
+				query.append(moeglichkeit.getAntwort()).append(";");
 			}
 			query.setLength(query.length() - 1);
 		}

@@ -42,7 +42,16 @@ public class DatabaseConnection
 		}
 		catch(SQLException e)
 		{
-			return null;
+			try
+			{
+				this.m_connection.prepareStatement(inQuery).executeUpdate();
+				return null;
+			}
+			catch(SQLException e2)
+			{
+				e2.printStackTrace();
+				return null;
+			}
 		}
 	}
 
